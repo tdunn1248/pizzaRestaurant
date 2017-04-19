@@ -1,3 +1,12 @@
+--psql database name < schema.sql
+DROP TABLE IF EXISTS customers
+DROP TABLE IF EXISTS customer_orders
+DROP TABLE IF EXISTS orders
+DROP TABLE IF EXISTS order_items
+DROP TABLE IF EXISTS pizzas
+DROP TABLE IF EXISTS drinks
+DROP TABLE IF EXISTS ingredients 
+
 CREATE TABLE customers (
   ID SERIAL PRIMARY KEY,
   name VARCHAR,
@@ -11,7 +20,7 @@ CREATE TABLE customers (
 CREATE TABLE customer_orders (
  ID SERIAL PRIMARY KEY,
  customer_id INT references customers(id),
-  order_id INT references orders(id)
+ order_id INT references orders(id)
 );
 
 CREATE TABLE orders (
@@ -35,7 +44,8 @@ CREATE TABLE pizzas(
   size VARCHAR,
   price DECIMAL,
   happy_hour_pricing DECIMAL,
-  qty INT
+  qty INT,
+  ingredients_id INT references ingredients(id)
 );
 
 CREATE TABLE drinks (

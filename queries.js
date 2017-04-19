@@ -27,19 +27,55 @@ function getPaymentMethod () {
 }
 
 //pizza preferences
-function customerOrders () {
+function customerOrders() {
   return db.any('SELECT * FROM customer_orders')
 }
 
 // track ingredients
-function getIngredients () {
+function getIngredients() {
   return db.any('SELECT * FROM ingredients')
 }
 
 //track drink data
-function getDrinkProductID () {
+function getDrinkProductID() {
   return db.any('SELECT * FROM drinks')
 }
+
+function getDrinkDescription() {
+  return db.any('SELECT drinks.name FROM drinks')
+}
+
+function getManufacturer() {
+  return db.any('SELECT drink.manufacturer FROM drinks')
+}
+
+function getDrinkSupplier() {
+  return db.any('SELECT drink.supplier FROM drinks')
+}
+
+function getDrinkPrice() {
+  return db.any('SELECT drinks.price FROM drinks')
+}
+
+//track pizza data
+function getPizzaSize() {
+  return db.any('SELECT pizza.size FROM pizzas')
+}
+
+function getPizzaCrust() {
+  return db.any('SELECT pizza.crust FROM pizzas')
+}
+
+// functions for ingredients
+
+function getHappyHourPrice() {
+  return db.any('SELECT pizza.happy_hour_pricing FROM pizzas')
+}
+
+function getPizzaPrice() {
+  return db.any('SELECT pizza.price FROM pizzas')
+}
+
 
 module.exports = {getAllCustomers,
   getCustomerName,

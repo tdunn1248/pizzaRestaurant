@@ -1,35 +1,94 @@
-let express = require('express')
-let router = express.Router()
-let http = require('http')
-let queries = require('../queries')
+const express = require('express')
+const router = express.Router()
+const http = require('http')
+const queries = require('../queries')
 
-let db = require('../queries.js')
+const db = require('../queries.js')
 
 
 
 // track customer Table
-router.get('/api/allCustomers', function getAllCustomers() {
+router.get('/api/allCustomers', (req, res) => {
+  // console.log(req.query)
   queries.getAllCustomers()
-    .then(function(data) {
+    .then( data => {
       res.json(data)
     })
-    .catch(function (err){
-      return next(err)
-    })
+    .catch( err => next(err))
 })
 
-// router.get('/api/customerName', db.getCustomerName)
-// router.get('/api/loginDetails', db.getLoginDetails)
-// router.get('/api/deliveryAddress', db.getDeliveryAddress)
-// router.get('/api/phoneNumber', db.getPhoneNumber)
-// router.get('/api/paymentMethod', db.getPaymentMethod)
-//
+router.get('/api/customerName', (req,res) {
+  queries.getCustomerName()
+   .then(function(data) {
+     res.json(data)
+   })
+   .catch(function (err){
+     return next(err)
+   })
+
+})
+
+ router.get('/api/loginDetails', (req,res){
+   queries.getLoginDetails()
+   .then(function(data) {
+     res.json(data)
+   })
+    .catch(function(data) {
+      return next(err)
+    })
+
+ })
+
+ router.get('/api/deliveryAddress', getDeliveryAddress(req,res){
+   queries.getDeliveryAddress()
+   .then(function(data) {
+     res.json(data)
+   })
+    .catch(function(data) {
+      return next(err)
+    })
+ })
+ router.get('/api/phoneNumber', getPhoneNumber(req,res){
+   queries.getPhoneNumber()
+   .then(function(data) {
+     res.json(data)
+   })
+    .catch(function(data) {
+      return next(err)
+    })
+ })
+ router.get('/api/paymentMethod', getPaymentMethod(req,res){
+   queries.getPaymentMethod()
+   .then(function(data) {
+     res.json(data)
+   })
+    .catch(function(data) {
+      return next(err)
+    })
+ })
+
 // // track Pizza Preferences
-// router.get('/api/customerPreference', db.customerOrderscus)
+router.get('/api/paymentMethod', customerOrders(req,res){
+  queries.customerOrders()
+  .then(function(data) {
+    res.json(data)
+  })
+   .catch(function(data) {
+     return next(err)
+   })
+})
 //
 // //track ingredients
-// router.get('/api/ingredients', db.getIngredients)
-//
+router.get('/api/paymentMethod', getIngredients(req,res){
+  queries.getIngredients()
+  .then(function(data) {
+    res.json(data)
+  })
+   .catch(function(data) {
+     return next(err)
+   })
+})
+
 // // track drinks
 // router.get('/api/productID', db.getDrinkProductID)
 // router.get('/api/drinkName', db.getDrinkName)
