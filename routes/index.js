@@ -2,12 +2,13 @@ let express = require('express')
 let router = express.Router()
 let http = require('http')
 let queries = require('../queries')
+
 let db = require('../queries.js')
 
 
 
 // track customer Table
-router.get('/api/allCustomers', function getAllCustomers(req, res) {
+router.get('/api/allCustomers', function getAllCustomers() {
   queries.getAllCustomers()
     .then(function(data) {
       res.json(data)
