@@ -1,4 +1,5 @@
-
+//import pgp
+// const db = pgp(connectionstring)
 
 // customer queries
 function getAllCustomers() {
@@ -45,7 +46,7 @@ function getDrinkDescription() {
   return db.any('SELECT drinks.name FROM drinks')
 }
 
-function getManufacturer() {
+function getDrinkManufacturer() {
   return db.any('SELECT drink.manufacturer FROM drinks')
 }
 
