@@ -3,28 +3,28 @@
 
 // customer queries
 function getAllCustomers() {
-  return db.any('SELECT * FROM Customers')
+  return db.any('SELECT * FROM customers')
 }
 
 
 function getCustomerName() {
-  return db.any('SELECT customers.name FROM Customers')
+  return db.any('SELECT customers.name FROM customers')
 }
 
 function getLoginDetails () {
-  return db.any('SELECT customers.login FROM Customers')
+  return db.any('SELECT customers.login FROM customers')
 }
 
 function getDeliveryAddress () {
-  return db.any('SELECT customers.address FROM Customers')
+  return db.any('SELECT customers.address FROM customers')
 }
 
 function getPhoneNumber () {
-  return db.any('SELECT customers.phone_number FROM Customers')
+  return db.any('SELECT customers.phone_number FROM customers')
 }
 
 function getPaymentMethod () {
-  return db.any('SELECT customers.payment FROM Customers')
+  return db.any('SELECT customers.payment FROM customers')
 }
 
 //pizza preferences
