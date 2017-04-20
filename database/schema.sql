@@ -43,6 +43,7 @@ CREATE TABLE pizzas(
   ingredients_id INT references ingredients(id)
 );
 
+
 DROP TABLE IF EXISTS drinks CASCADE;
 CREATE TABLE drinks (
   ID SERIAL PRIMARY KEY,
@@ -87,3 +88,47 @@ INSERT INTO customer_orders VALUES (default, 3, 3);
 INSERT INTO customer_orders VALUES (default, 4, 4);
 INSERT INTO customer_orders VALUES (default, 5, 5);
 INSERT INTO customer_orders VALUES (default, 6, 6);
+--load ingredients table
+INSERT INTO ingredients VALUES (default, 'sausage');
+INSERT INTO ingredients VALUES (default, 'pepperoni');
+INSERT INTO ingredients VALUES (default, 'cheese');
+INSERT INTO ingredients VALUES (default, 'mushrooms');
+INSERT INTO ingredients VALUES (default, 'bacon');
+INSERT INTO ingredients VALUES (default, 'yellow peppers');
+INSERT INTO ingredients VALUES (default, 'olives');
+INSERT INTO ingredients VALUES (default, 'chicken');
+INSERT INTO ingredients VALUES (default, 'spinach');
+INSERT INTO ingredients VALUES (default, 'asiago cheese');
+INSERT INTO ingredients VALUES (default, 'onions');
+INSERT INTO ingredients VALUES (default, 'jalepeño');
+INSERT INTO ingredients VALUES (default, 'anchioves');
+INSERT INTO ingredients VALUES (default, 'green peppers');
+INSERT INTO ingredients VALUES (default, 'beef');
+INSERT INTO ingredients VALUES (default, 'ham');
+
+--load pizza table
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '34.76', '12.48', 2, 1);
+INSERT INTO pizzas VALUES (default, 'thick', 'S', '42.16', '12.48', 1, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '34.61', '12.48', 3, 5);
+INSERT INTO pizzas VALUES (default, 'classic', 'S', '12.76', '12.48', 4, 2);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '24.76', '18.48', 6, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '12.76', '11.48', 8, 3);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '15.76', '21.48', 2, 4);
+
+--load drinks table
+INSERT INTO drinks VALUES (default, 'Sprite', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Coke', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Dr. Pepper', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Mr. Pibb', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Root Beer', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Cherry Coke', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+INSERT INTO drinks VALUES (default, 'Fanta', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
+
+--load order_items
+INSERT INTO order_items VALUES (default, 4, 2, 3, 1);
+INSERT INTO order_items VALUES (default, 1, 7, 2, 2);
+INSERT INTO order_items VALUES (default, 1, 4, 7, 1);
+INSERT INTO order_items VALUES (default, 1, 1, 6, 4);
+INSERT INTO order_items VALUES (default, 1, 6, 5, 1);
+INSERT INTO order_items VALUES (default, 1, 5, 2, 1);
+INSERT INTO order_items VALUES (default, 1, 3, 1, 1);
