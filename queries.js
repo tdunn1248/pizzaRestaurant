@@ -1,6 +1,3 @@
-// import pgp
-// const db = pgp(connectionstring)
-
 // customer queries
 function getAllCustomers() {
   return db.any('SELECT * FROM customers')
