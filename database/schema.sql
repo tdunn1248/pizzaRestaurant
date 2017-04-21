@@ -104,13 +104,13 @@ INSERT INTO ingredients VALUES (default, 'beef');
 INSERT INTO ingredients VALUES (default, 'ham');
 
 --load pizza table
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '34.76', NULL, 2, 1);
-INSERT INTO pizzas VALUES (default, 'thick', 'S', '42.16', NULL, 1, 2);
-INSERT INTO pizzas VALUES (default, 'thick', 'M', '34.61', NULL, 3, 5);
-INSERT INTO pizzas VALUES (default, 'classic', 'S', '12.76', NULL, 4, 2);
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '24.76', NULL, 6, 2);
-INSERT INTO pizzas VALUES (default, 'thick', 'M', '12.76', NULL, 8, 3);
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '15.76', NULL, 2, 4);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '34.76', '25.00', 2, 1);
+INSERT INTO pizzas VALUES (default, 'thick', 'S', '42.16', '30.00', 1, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '34.61', '27.20', 3, 5);
+INSERT INTO pizzas VALUES (default, 'classic', 'S', '12.76', '8.00', 4, 2);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '24.76', '16.98', 6, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '12.76', '8.23', 8, 3);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '15.76', '11.32', 2, 4);
 
 --load drinks table
 INSERT INTO drinks VALUES (default, 'Sprite', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');
