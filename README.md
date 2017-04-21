@@ -1,14 +1,14 @@
 # Pizza Restaurant Relational Database
-    Exercise to help
+### Exercise to help
 
 ### Leah Ann Mitchell, Thomas Dunn
 
 ## Getting Started
-  Create a relational database with Node Js, PostgreSQL, & Express
+### Create a relational database with Node Js, PostgreSQL, & Express
 
 ## Requirements
-  'npm install'
-  'npm install express-generator -g'
+  npm install
+  npm install express-generator -g
 
 ## Build the Schema
 
