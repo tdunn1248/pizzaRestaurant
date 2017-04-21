@@ -13,8 +13,9 @@
 
   $ express node-postgres-promises  
   $ cd node-postgres-promises  
-  $ npm install  
-
+  $ npm install
+   
+### Test the connection!
   $ npm start  
 
 #### Install pg-promise to setup Postgres bindings
