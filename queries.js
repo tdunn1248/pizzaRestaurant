@@ -48,11 +48,11 @@ function getDrinkDescription() {
 }
 
 function getDrinkManufacturer() {
-  return db.any('SELECT drink.manufacturer FROM drinks')
+  return db.any('SELECT drinks.manufacturer FROM drinks')
 }
 
 function getDrinkSupplier() {
-  return db.any('SELECT drink.supplier FROM drinks')
+  return db.any('SELECT drinks.supplier FROM drinks')
 }
 
 function getDrinkPrice() {
@@ -61,20 +61,20 @@ function getDrinkPrice() {
 
 //track pizza data
 function getPizzaSize() {
-  return db.any('SELECT pizza.size FROM pizzas')
+  return db.any('SELECT pizzas.size FROM pizzas')
 }
 
 function getPizzaCrust() {
-  return db.any('SELECT pizza.crust FROM pizzas')
+  return db.any('SELECT pizzas.crust FROM pizzas')
 }
 
 // functions for ingredients
 function getHappyHourPrice() {
-  return db.any('SELECT pizza.happy_hour_pricing FROM pizzas')
+  return db.any('SELECT pizzas.happy_hour_pricing FROM pizzas')
 }
 
 function getPizzaPrice() {
-  return db.any('SELECT pizza.price FROM pizzas')
+  return db.any('SELECT pizzas.price FROM pizzas')
 }
 
 module.exports = {getAllCustomers,
@@ -85,5 +85,13 @@ module.exports = {getAllCustomers,
   getPaymentMethod,
   customerOrders,
   getIngredients,
-  getDrinkProductID
-  }
+  getDrinkProductID,
+  getDrinkDescription,
+  getDrinkManufacturer,
+  getDrinkSupplier,
+  getDrinkPrice,
+  getPizzaSize,
+  getPizzaCrust,
+  getHappyHourPrice,
+  getPizzaPrice
+}

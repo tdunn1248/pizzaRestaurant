@@ -115,15 +115,15 @@ router.get('/api/drinkPrice', (req, res) => {
 
 // track pizza data
 router.get('/api/pizzaSize', (req, res) => {
-  queries.getPizzaSlice()
+  queries.getPizzaSize()
     .then(data => {
       res.json(data)
   })
    .catch( err => console.error(err))
 })
 
-router.get('/api/pizzaType', (req, res) => {
-  queries.getPizzaSlice()
+router.get('/api/pizzaCrust', (req, res) => {
+  queries.getPizzaCrust()
     .then(data => {
       res.json(data)
   })
