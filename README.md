@@ -9,16 +9,17 @@
 
 ## Requirements
 
-  $ npm install express-generator@4 -g
+  $ npm install express-generator@4 -g  
 
-  $ express node-postgres-promises
-  $ cd node-postgres-promises
-  $ npm install
+  $ express node-postgres-promises  
+  $ cd node-postgres-promises  
+  $ npm install  
 
-  $ npm start
+  $ npm start  
 
-  #### Install pg-promise to setup Postgres bindings
-  $ npm install pg-promise@5 --save
+#### Install pg-promise to setup Postgres bindings
+
+  $ npm install pg-promise@5 --save  
 
 
 
@@ -32,7 +33,7 @@
 ### Use PostgresSql to build out your database with data  
 
 ## Create the Queries for your database
-### 
+###
 
 ## Create Routes to connect to database
 ### Use express to setup routes connecting your Server to your database
