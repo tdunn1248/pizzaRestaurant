@@ -77,6 +77,7 @@ function getPizzaPrice() {
   return db.any('SELECT pizza.price FROM pizzas')
 }
 
+// orders?
 
 module.exports = {getAllCustomers,
   getCustomerName,

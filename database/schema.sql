@@ -62,6 +62,12 @@ CREATE TABLE order_items (
   quantity INT
 );
 
+-- SELECT pizzas.price FROM pizzas;
+-- SELECT pizzas.price,
+--        price*qty AS "Regular Price",
+--        price*qty-price*qty*Discount AS "Price After Discount"
+-- FROM pizzas;
+
 --load customer tables
 INSERT INTO customers VALUES (default, 'Papa John', 'papaJohn@gmail.com', 'papajohn123', '123 Main St', 8749872736, 1375849387482945 );
 INSERT INTO customers VALUES (default, 'Tony', 'tony@aol.com', 'theMan247','123 Main St', 8749872736, 0384736275849037 );
@@ -107,13 +113,13 @@ INSERT INTO ingredients VALUES (default, 'beef');
 INSERT INTO ingredients VALUES (default, 'ham');
 
 --load pizza table
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '34.76', '12.48', 2, 1);
-INSERT INTO pizzas VALUES (default, 'thick', 'S', '42.16', '12.48', 1, 2);
-INSERT INTO pizzas VALUES (default, 'thick', 'M', '34.61', '12.48', 3, 5);
-INSERT INTO pizzas VALUES (default, 'classic', 'S', '12.76', '12.48', 4, 2);
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '24.76', '18.48', 6, 2);
-INSERT INTO pizzas VALUES (default, 'thick', 'M', '12.76', '11.48', 8, 3);
-INSERT INTO pizzas VALUES (default, 'thin', 'L', '15.76', '21.48', 2, 4);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '34.76', NULL, 2, 1);
+INSERT INTO pizzas VALUES (default, 'thick', 'S', '42.16', NULL, 1, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '34.61', NULL, 3, 5);
+INSERT INTO pizzas VALUES (default, 'classic', 'S', '12.76', NULL, 4, 2);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '24.76', NULL, 6, 2);
+INSERT INTO pizzas VALUES (default, 'thick', 'M', '12.76', NULL, 8, 3);
+INSERT INTO pizzas VALUES (default, 'thin', 'L', '15.76', NULL, 2, 4);
 
 --load drinks table
 INSERT INTO drinks VALUES (default, 'Sprite', 'Coca Cola Inc.', 'Generic Soda Supplier Name', '1.99');

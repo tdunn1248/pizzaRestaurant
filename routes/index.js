@@ -133,8 +133,6 @@ router.get('/api/pizzaType', (req, res) => {
    .catch( err => next(err))
 })
 
-
-// router.get('/api/pizzaIngredients', db.getpizzaIngredients)
 router.get('/api/priceData', (req, res) => {
    queries.getPizzaPrice()
      .then(data => {
@@ -150,5 +148,8 @@ router.get('/api/priceData', (req, res) => {
    })
     .catch( err => next(err))
 })
+
+//order_items?
+// orders?
 
 module.exports = router;
