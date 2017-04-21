@@ -11,7 +11,7 @@ router.get('/api/allCustomers', (req, res) => {
     .then( data => {
       res.json(data)
     })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
 })
 
 router.get('/api/customerName', (req,res) => {
@@ -19,7 +19,7 @@ router.get('/api/customerName', (req,res) => {
    .then(data => {
      res.json(data)
    })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
  router.get('/api/loginDetails', (req,res) => {
@@ -27,7 +27,7 @@ router.get('/api/customerName', (req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/deliveryAddress',(req,res) => {
@@ -35,7 +35,7 @@ router.get('/api/customerName', (req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/phoneNumber',(req,res) => {
@@ -43,7 +43,7 @@ router.get('/api/customerName', (req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/paymentMethod',(req,res) => {
@@ -51,34 +51,34 @@ router.get('/api/customerName', (req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
 // // track Pizza Preferences
-router.get('/api/paymentMethod',(req,res) => {
+router.get('/api/customerOrders',(req,res) => {
   queries.customerOrders()
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 // //track ingredients
-router.get('/api/paymentMethod',(req,res) => {
+router.get('/api/ingredients',(req,res) => {
   queries.getIngredients()
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 // track drinks
- router.get('/api/productID',(req,res) => {
+ router.get('/api/drinkProductID',(req,res) => {
    queries.getDrinkProductID()
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/drinkName',(req,res) => {
@@ -86,7 +86,7 @@ router.get('/api/paymentMethod',(req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/drinkManufacturer',(req,res) => {
@@ -94,7 +94,7 @@ router.get('/api/paymentMethod',(req,res) => {
     .then(data => {
      res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
 router.get('/api/drinkSupplier', (req, res) => {
@@ -102,7 +102,7 @@ router.get('/api/drinkSupplier', (req, res) => {
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 router.get('/api/drinkPrice', (req, res) => {
@@ -110,7 +110,7 @@ router.get('/api/drinkPrice', (req, res) => {
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 // track pizza data
@@ -119,7 +119,7 @@ router.get('/api/pizzaSize', (req, res) => {
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 router.get('/api/pizzaType', (req, res) => {
@@ -127,7 +127,7 @@ router.get('/api/pizzaType', (req, res) => {
     .then(data => {
       res.json(data)
   })
-   .catch( err => next(err))
+   .catch( err => console.error(err))
 })
 
 router.get('/api/priceData', (req, res) => {
@@ -135,7 +135,7 @@ router.get('/api/priceData', (req, res) => {
      .then(data => {
        res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
  })
 
  router.get('/api/happyHourPrice', (req, res) => {
@@ -143,7 +143,7 @@ router.get('/api/priceData', (req, res) => {
      .then(data => {
        res.json(data)
    })
-    .catch( err => next(err))
+    .catch( err => console.error(err))
 })
 
 module.exports = router;

@@ -1,3 +1,8 @@
+
+const pgp = require('pg-promise')()
+const connectionString = 'postgres://rover@localhost:5432/pizzaDatabase'
+const db = pgp(connectionString)
+
 // customer queries
 function getAllCustomers() {
   return db.any('SELECT * FROM customers')
