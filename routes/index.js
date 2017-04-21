@@ -1,46 +1,149 @@
-let express = require('express')
-let router = express.Router()
-let http = require('http')
-let queries = require('../queries')
-let db = require('../queries.js')
+const express = require('express')
+const router = express.Router()
+const http = require('http')
+const queries = require('../queries')
 
-
+const db = require('../queries.js')
 
 // track customer Table
-router.get('/api/allCustomers', function getAllCustomers(req, res) {
+router.get('/api/allCustomers', (req, res) => {
   queries.getAllCustomers()
-    .then(function(data) {
+    .then( data => {
       res.json(data)
     })
-    .catch(function (err){
-      return next(err)
-    })
+    .catch( err => next(err))
 })
 
-// router.get('/api/customerName', db.getCustomerName)
-// router.get('/api/loginDetails', db.getLoginDetails)
-// router.get('/api/deliveryAddress', db.getDeliveryAddress)
-// router.get('/api/phoneNumber', db.getPhoneNumber)
-// router.get('/api/paymentMethod', db.getPaymentMethod)
-//
+router.get('/api/customerName', (req,res) => {
+  queries.getCustomerName()
+   .then(data => {
+     res.json(data)
+   })
+   .catch( err => next(err))
+})
+
+ router.get('/api/loginDetails', (req,res) => {
+   queries.getLoginDetails()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/deliveryAddress',(req,res) => {
+   queries.getDeliveryAddress()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/phoneNumber',(req,res) => {
+   queries.getPhoneNumber()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/paymentMethod',(req,res) => {
+   queries.getPaymentMethod()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
 // // track Pizza Preferences
-// router.get('/api/customerPreference', db.customerOrderscus)
-//
+router.get('/api/paymentMethod',(req,res) => {
+  queries.customerOrders()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
 // //track ingredients
-// router.get('/api/ingredients', db.getIngredients)
-//
-// // track drinks
-// router.get('/api/productID', db.getDrinkProductID)
-// router.get('/api/drinkName', db.getDrinkName)
-// router.get('/api/drinkManufacturer', db.getManufacturer)
-// router.get('/api/drinkSupplier', db.getSupplier)
-// router.get('/api/drinkPrice', db.getDrinkPrice)
-//
-// // track pizza data
-// router.get('/api/pizzaSize', db.getPizzaSize)
-// router.get('/api/pizzaType', db.getPizzaType)
-// router.get('/api/pizzaIngredients', db.getpizzaIngredients)
-// router.get('/api/priceData', db.getPriceData)
-// router.get('/api/happyHourPrice', db.getHappyHourPrice)
+router.get('/api/paymentMethod',(req,res) => {
+  queries.getIngredients()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
+// track drinks
+ router.get('/api/productID',(req,res) => {
+   queries.getDrinkProductID()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/drinkName',(req,res) => {
+   queries.getDrinkDescription()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/drinkManufacturer',(req,res) => {
+   queries.getDrinkManufacturer()
+    .then(data => {
+     res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+router.get('/api/drinkSupplier', (req, res) => {
+  queries.getDrinkSupplier()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
+router.get('/api/drinkPrice', (req, res) => {
+  queries.getDrinkPrice()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
+// track pizza data
+router.get('/api/pizzaSize', (req, res) => {
+  queries.getPizzaSlice()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
+router.get('/api/pizzaType', (req, res) => {
+  queries.getPizzaSlice()
+    .then(data => {
+      res.json(data)
+  })
+   .catch( err => next(err))
+})
+
+router.get('/api/priceData', (req, res) => {
+   queries.getPizzaPrice()
+     .then(data => {
+       res.json(data)
+   })
+    .catch( err => next(err))
+ })
+
+ router.get('/api/happyHourPrice', (req, res) => {
+   queries.getHappyHourPrice()
+     .then(data => {
+       res.json(data)
+   })
+    .catch( err => next(err))
+})
 
 module.exports = router;

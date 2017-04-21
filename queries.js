@@ -1,77 +1,78 @@
-
+// import pgp
+// const db = pgp(connectionstring)
 
 // customer queries
 function getAllCustomers() {
-  return db.any('SELECT * FROM Customers')
+  return db.any('SELECT * FROM customers')
 }
 
-
-function getCustomerName(req, res) {
-  db.any('SELECT customers.name FROM Customers')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getCustomerName() {
+  return db.any('SELECT customers.name FROM customers')
 }
 
-function getLoginDetails (req, res) {
-  db.any('SELECT customers.user_name FROM Customers')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getLoginDetails () {
+  return db.any('SELECT customers.login FROM customers')
 }
 
-function getDeliveryAddress (req, res) {
-  db.any('SELECT customers.address FROM Customers')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getDeliveryAddress () {
+  return db.any('SELECT customers.address FROM customers')
 }
 
-function getPhoneNumber (req, res) {
-  db.any('SELECT customers.phone_number FROM Customers')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getPhoneNumber () {
+  return db.any('SELECT customers.phone_number FROM customers')
 }
 
-function getPaymentMethod (req, res) {
-  db.any('SELECT customers.payment FROM Customers')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-      console.log(getPaymentMethod)
-    })
+function getPaymentMethod () {
+  return db.any('SELECT customers.payment FROM customers')
 }
 
 //pizza preferences
-function customerOrders (req, res) {
-  db.any('SELECT * FROM customer_order')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function customerOrders() {
+  return db.any('SELECT * FROM customer_orders')
 }
 
 // track ingredients
-function getIngredients (req, res) {
-  db.any('SELECT * FROM ingredients')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getIngredients() {
+  return db.any('SELECT * FROM ingredients')
 }
 
 //track drink data
-function getDrinkProductID (req, res) {
-  db.any('SELECT * FROM drinks')
-    .then(function(data) {
-      // res.status(200)
-      // res.data
-    })
+function getDrinkProductID() {
+  return db.any('SELECT * FROM drinks')
+}
+
+function getDrinkDescription() {
+  return db.any('SELECT drinks.name FROM drinks')
+}
+
+function getDrinkManufacturer() {
+  return db.any('SELECT drink.manufacturer FROM drinks')
+}
+
+function getDrinkSupplier() {
+  return db.any('SELECT drink.supplier FROM drinks')
+}
+
+function getDrinkPrice() {
+  return db.any('SELECT drinks.price FROM drinks')
+}
+
+//track pizza data
+function getPizzaSize() {
+  return db.any('SELECT pizza.size FROM pizzas')
+}
+
+function getPizzaCrust() {
+  return db.any('SELECT pizza.crust FROM pizzas')
+}
+
+// functions for ingredients
+function getHappyHourPrice() {
+  return db.any('SELECT pizza.happy_hour_pricing FROM pizzas')
+}
+
+function getPizzaPrice() {
+  return db.any('SELECT pizza.price FROM pizzas')
 }
 
 module.exports = {getAllCustomers,
