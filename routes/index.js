@@ -5,8 +5,6 @@ const queries = require('../queries')
 
 const db = require('../queries.js')
 
-
-
 // track customer Table
 router.get('/api/allCustomers', (req, res) => {
   queries.getAllCustomers()
@@ -64,7 +62,6 @@ router.get('/api/paymentMethod',(req,res) => {
   })
    .catch( err => next(err))
 })
-
 
 // //track ingredients
 router.get('/api/paymentMethod',(req,res) => {
@@ -148,8 +145,5 @@ router.get('/api/priceData', (req, res) => {
    })
     .catch( err => next(err))
 })
-
-//order_items?
-// orders?
 
 module.exports = router;

@@ -1,5 +1,3 @@
---psql database name < schema.sql
-
 DROP TABLE IF EXISTS customers CASCADE;
 CREATE TABLE customers (
   ID SERIAL PRIMARY KEY,
@@ -43,7 +41,6 @@ CREATE TABLE pizzas(
   ingredients_id INT references ingredients(id)
 );
 
-
 DROP TABLE IF EXISTS drinks CASCADE;
 CREATE TABLE drinks (
   ID SERIAL PRIMARY KEY,
@@ -61,12 +58,6 @@ CREATE TABLE order_items (
   drink_id INT references drinks(id),
   quantity INT
 );
-
--- SELECT pizzas.price FROM pizzas;
--- SELECT pizzas.price,
---        price*qty AS "Regular Price",
---        price*qty-price*qty*Discount AS "Price After Discount"
--- FROM pizzas;
 
 --load customer tables
 INSERT INTO customers VALUES (default, 'Papa John', 'papaJohn@gmail.com', 'papajohn123', '123 Main St', 8749872736, 1375849387482945 );

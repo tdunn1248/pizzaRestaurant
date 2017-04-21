@@ -6,7 +6,6 @@ function getAllCustomers() {
   return db.any('SELECT * FROM customers')
 }
 
-
 function getCustomerName() {
   return db.any('SELECT customers.name FROM customers')
 }
@@ -68,7 +67,6 @@ function getPizzaCrust() {
 }
 
 // functions for ingredients
-
 function getHappyHourPrice() {
   return db.any('SELECT pizza.happy_hour_pricing FROM pizzas')
 }
@@ -76,8 +74,6 @@ function getHappyHourPrice() {
 function getPizzaPrice() {
   return db.any('SELECT pizza.price FROM pizzas')
 }
-
-// orders?
 
 module.exports = {getAllCustomers,
   getCustomerName,
