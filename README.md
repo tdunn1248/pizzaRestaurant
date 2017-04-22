@@ -1,6 +1,6 @@
 # Pizza Restaurant Relational Database
 ### Leah Ann Mitchell, Thomas Dunn
-#### Exercise to expand your relational database knowledge, setup a server, and connect that database to your server  
+#### Exercise in relational databases, setting up a server, and connecting routes. 
 
 
 
